@@ -10,7 +10,7 @@ void drive_robot(float linear_x, float angular_z)
 {
     // Requests a service and pass the velocities to it to drive the robot
     ball_chaser::DriveToTarget srv;
-    srv.request.linear_x = lineat_x;
+    srv.request.linear_x = linear_x;
     srv.request.angular_z = angular_z;
     if (!client.call(srv)) {
     ROS_ERROR("Failed to call service drive_bot!");
